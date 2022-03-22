@@ -33,3 +33,18 @@ class Tile:
     def random_monster_type(self):
         return 'monster'
         #return 'orc'
+
+    def skull(self):
+        return 'skull'
+
+    def bone(self):
+        return 'bone'
+
+    def web(self):
+        return 'web'
+
+    def stall(self):
+        return 'stall'
+        
+    def trader(self):
+        return 'trader'

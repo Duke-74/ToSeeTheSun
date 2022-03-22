@@ -7,6 +7,17 @@ rock = pygame.image.load('./Assets/Sprites/frames/wall_column_mid.png')
 
 enemy = pygame.image.load('./Assets/crawl-tiles Oct-5-2010/player/base/centaur_brown_f.png')
 
+#Заменить на паутину
+web = pygame.image.load('./Assets/crawl-tiles Oct-5-2010/dc-dngn/floor/dirt_full.png')
+#Заменить на череп
+skull = pygame.image.load('./Assets/crawl-tiles Oct-5-2010/dc-dngn/vaults/grate.png')
+#Заменить на кости
+bone = pygame.image.load('./Assets/crawl-tiles Oct-5-2010/dc-dngn/granite_stump.png')
+
+#Заменить на торговца
+trader = pygame.image.load('./Assets/crawl-tiles Oct-5-2010/player/base/demigod_m.png')
+#Заменить на прилавок
+stall = pygame.image.load('./Assets/crawl-tiles Oct-5-2010/dc-dngn/gate_closed_middle.png')
 
 class RoomService:
     def __init__(self):
@@ -64,3 +75,15 @@ class RoomService:
 
                 if room[x][y] == self.Tile.random_monster_type():
                     self.Tile.draw_tile(screen, enemy, x, y)
+                
+                if room[x][y] == self.Tile.web():
+                    self.Tile.draw_tile(screen, web, x, y)
+                if room[x][y] == self.Tile.skull():
+                    self.Tile.draw_tile(screen, skull, x, y)
+                if room[x][y] == self.Tile.bone():
+                    self.Tile.draw_tile(screen, bone, x, y)
+
+                if room[x][y] == self.Tile.trader():
+                    self.Tile.draw_tile(screen, trader, x, y)
+                if room[x][y] == self.Tile.stall():
+                    self.Tile.draw_tile(screen, skull, x, y)
